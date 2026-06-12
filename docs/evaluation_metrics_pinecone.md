@@ -1,6 +1,6 @@
 # Retrieval Evaluation Metrics
 
-Generated: 2026-06-11 18:09:02
+Generated: 2026-06-11 19:42:49
 Backend: pinecone
 
 ## Summary
@@ -17,13 +17,13 @@ Backend: pinecone
 | ID | Query | Expected | Actual | Source | Confidence | Resolved |
 | --- | --- | --- | --- | --- | ---: | --- |
 | Q001 | Is my plan active? | answer | answer | member_profile | 0.9910 | True |
-| Q002 | What is my group ID? | answer | answer | member_profile | 0.7722 | True |
-| Q003 | How much deductible do I have left? | answer | answer | member_profile | 0.7376 | True |
-| Q004 | What is my copay for urgent care? | answer | answer | benefits | 0.9148 | True |
+| Q002 | What is my group ID? | answer | answer | member_profile | 0.7723 | True |
+| Q003 | How much deductible do I have left? | answer | answer | member_profile | 0.7374 | True |
+| Q004 | What is my copay for urgent care? | answer | answer | benefits | 0.9149 | True |
 | Q005 | Is Dr Patel in network? | answer | answer | provider_directory | 1.0450 | True |
 | Q006 | Is Dr Patell in netwrok? | answer | answer | provider_directory | 1.0450 | True |
-| Q007 | Do I need a referral for a specialist? | answer | answer | benefits | 0.9391 | True |
-| Q008 | Do I need pre auto approval for an MRI? | answer | answer | prior_authorization | 0.9283 | True |
+| Q007 | Do I need a referral for a specialist? | answer | answer | benefits | 0.9390 | True |
+| Q008 | Do I need pre auto approval for an MRI? | answer | answer | prior_authorization | 1.0093 | True |
 | Q009 | Why was my MRI claim denied? | answer_with_escalation | answer_with_escalation | claims | 0.8950 | True |
 | Q010 | Can you estimate my specialist cost? | escalate | escalate | member_profile | 1.0000 | True |
 | Q011 | Can I change my phone number? | secure_workflow | secure_workflow | faq | 1.0000 | True |

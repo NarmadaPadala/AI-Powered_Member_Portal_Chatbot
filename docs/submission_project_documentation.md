@@ -131,7 +131,7 @@ These prompts helped move the project from a generic RAG assignment into a more 
 | Initial scope | Started from the assignment: customer support bot with hybrid search and fallback. | Established the required project goals. |
 | Healthcare framing | Reframed the support bot as a healthcare member portal assistant. | Made the project more domain-specific and interview-friendly. |
 | Synthetic data creation | Built mock members, claims, benefits, providers, FAQs, tickets, glossary, and plan rules. | Avoided PHI while still creating a realistic dataset. |
-| Pinecone ingestion | Loaded 31 retrieval documents into Pinecone. | Created the semantic retrieval layer. |
+| Pinecone ingestion | Loaded 32 retrieval documents into Pinecone. | Created the semantic retrieval layer. |
 | Hybrid retrieval | Added keyword and fuzzy reranking on top of semantic search. | Improved handling of exact terms, names, and spelling mistakes. |
 | LangGraph workflow | Added graph routing for safety, retrieval, confidence, answering, and escalation. | Made the system easier to audit and explain. |
 | Safety guardrails | Added emergency, medical advice, secure workflow, guarantee, inactive coverage, and small-talk handling. | Reduced hallucination and unsafe over-answering. |

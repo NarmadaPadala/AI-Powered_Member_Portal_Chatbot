@@ -60,6 +60,10 @@ def fallback_answer(
         return f"Based on the eligibility rules: {text}"
     if source_type == "provider_directory":
         return f"Based on the provider directory: {text}"
+    if source_type == "benefits":
+        return text
+    if source_type == "prior_authorization":
+        return f"Prior authorization note: {text}"
 
     return f"Based on your plan information: {text}"
 

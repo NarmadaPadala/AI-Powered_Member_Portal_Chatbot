@@ -10,6 +10,7 @@ TOKEN_RE = re.compile(r"[a-z0-9]+")
 QUERY_EXPANSIONS = {
     "deductble": "deductible",
     "netwrok": "network",
+    "near by": "nearby",
     "patell": "patel",
     "pre auto approval": "prior authorization",
     "pre approval": "prior authorization",
@@ -74,12 +75,15 @@ def source_boost(query: str, source_type: str) -> float:
             "estimate my",
         ],
         "benefits": [
+            "cover",
             "copay",
+            "emergency",
             "urgent care",
             "specialist",
             "referral",
             "out of network",
             "covered",
+            "mri",
         ],
         "claims": ["claim", "denied", "denial"],
         "prior_authorization": ["prior authorization", "approval", "mri"],
@@ -90,12 +94,21 @@ def source_boost(query: str, source_type: str) -> float:
     }
     boost = 0.1 if any(term in normalized for term in boosts.get(source_type, [])) else 0.0
     personal_terms = [" my ", " i ", "me ", "do i", "have i"]
+    coverage_question = any(term in normalized for term in ["cover", "covered", "coverage"])
     if source_type == "member_profile" and any(term in normalized for term in [" my ", " i ", "me "]):
         boost += 0.22
     if source_type == "member_profile" and any(
         term in normalized for term in ["group id", "deductible", "active", "remaining"]
     ):
         boost += 0.16
+    if source_type == "member_profile" and coverage_question:
+        boost -= 0.35
+    if source_type == "benefits" and coverage_question:
+        boost += 0.28
+    if source_type == "benefits" and any(term in normalized for term in ["mri", "emergency"]):
+        boost += 0.2
+    if source_type == "prior_authorization" and "mri" in normalized:
+        boost += 0.18
     if source_type == "glossary" and " my " in f" {normalized} ":
         boost -= 0.35
     if source_type == "glossary" and any(term in normalized for term in personal_terms):

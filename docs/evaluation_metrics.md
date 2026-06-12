@@ -1,6 +1,6 @@
 # Retrieval Evaluation Metrics
 
-Generated: 2026-06-11 18:08:26
+Generated: 2026-06-11 19:42:36
 Backend: local
 
 ## Summary
@@ -23,7 +23,7 @@ Backend: local
 | Q005 | Is Dr Patel in network? | answer | answer | provider_directory | 0.8249 | True |
 | Q006 | Is Dr Patell in netwrok? | answer | answer | provider_directory | 0.8249 | True |
 | Q007 | Do I need a referral for a specialist? | answer | answer | benefits | 0.8431 | True |
-| Q008 | Do I need pre auto approval for an MRI? | answer | answer | prior_authorization | 0.7886 | True |
+| Q008 | Do I need pre auto approval for an MRI? | answer | answer | prior_authorization | 0.9686 | True |
 | Q009 | Why was my MRI claim denied? | answer_with_escalation | answer_with_escalation | claims | 0.6080 | True |
 | Q010 | Can you estimate my specialist cost? | escalate | escalate | member_profile | 1.0000 | True |
 | Q011 | Can I change my phone number? | secure_workflow | secure_workflow | faq | 1.0000 | True |
