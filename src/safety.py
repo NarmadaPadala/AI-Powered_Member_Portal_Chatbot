@@ -51,6 +51,9 @@ SMALL_TALK_TERMS = {
     "hello",
     "hi",
     "hey",
+    "how are you",
+    "what's up",
+    "whats up",
     "yes",
     "no",
 }

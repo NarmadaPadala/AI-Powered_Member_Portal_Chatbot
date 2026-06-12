@@ -12,7 +12,7 @@ from src.member_data import (
     get_providers,
     money,
 )
-from src.rag_answer import MEMBER_SERVICES_PHONE, answer_question
+from src.rag_answer import MEMBER_SERVICES_PHONE, answer_question, offline_answer_question
 from src.settings import get_settings
 
 
@@ -327,13 +327,10 @@ def render_chat(member: dict, plan: dict) -> None:
             result = answer_question(question, member, plan, settings)
             answer = result["answer"]
             escalated = result.get("escalated", False)
-        except Exception as exc:
-            answer = (
-                "I could not reach the support service right now. Please try again or contact "
-                "Member Services."
-            )
-            escalated = True
-            st.caption(str(exc))
+        except Exception:
+            result = offline_answer_question(question, member, plan)
+            answer = result["answer"]
+            escalated = result.get("escalated", False)
 
     st.session_state.qa_history.append(
         {
