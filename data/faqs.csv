@@ -1,0 +1,13 @@
+faq_id,category,question,answer,escalation_policy
+FAQ001,Benefits,What is a deductible?,A deductible is the amount you pay for covered services before the plan starts paying coinsurance for services where the deductible applies.,Answer directly
+FAQ002,Benefits,What is a copay?,A copay is a fixed amount you pay for a covered service such as a primary care visit or urgent care visit.,Answer directly
+FAQ003,Benefits,What is coinsurance?,Coinsurance is your share of the allowed cost after any deductible is met, usually shown as a percentage.,Answer directly
+FAQ004,Provider Network,How do I know if a provider is in network?,Use the provider directory or ask the assistant for a provider name. Network status depends on your plan network.,Answer if provider and plan are known
+FAQ005,Account,Can I change my phone number?,For security, phone number updates must be completed through the secure profile update form or Member Services verification.,Escalate to secure account workflow
+FAQ006,Claims,Why was my claim denied?,Claims can be denied for reasons such as missing prior authorization, inactive coverage, missing referral, non-covered service, or duplicate billing. Specific claim disputes should be reviewed by Member Services.,Escalate for claim-specific disputes
+FAQ007,Emergency,What should I do in a medical emergency?,If you may be having a medical emergency, call 911 immediately or go to the nearest emergency room.,Emergency escalation
+FAQ008,Enrollment,Can I change my plan?,You can usually change plans during open enrollment. Outside open enrollment, you need a qualifying life event.,Answer with enrollment rules
+FAQ009,Dependents,Can I add a dependent?,You may add a dependent during open enrollment or after a qualifying life event such as marriage, birth, adoption, or loss of other coverage. Submit the dependent verification form.,Answer with form workflow
+FAQ010,Dependents,Can I access my dependent's information?,Dependent access depends on relationship, age, consent, and privacy rules. Adults generally need to grant permission.,Answer with privacy caveat
+FAQ011,Prior Authorization,What is prior authorization?,Prior authorization is approval required before some services, medications, or procedures are covered.,Answer directly
+FAQ012,Support,What if the assistant is not sure?,If the assistant is not confident, it should not guess. It should provide the Member Services phone number or create a support case.,Escalate

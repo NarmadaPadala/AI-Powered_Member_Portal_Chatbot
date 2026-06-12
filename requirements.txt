@@ -1,0 +1,8 @@
+langchain>=0.3.27
+langchain-community>=0.3.27
+langchain-core>=0.3.72
+langgraph>=0.5.4
+openai>=1.99.0
+pinecone>=7.0.0
+python-dotenv>=1.0.1
+streamlit>=1.40.0

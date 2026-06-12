@@ -1,0 +1,6 @@
+auth_id,service_category,plan_type,prior_auth_required,notes
+AUTH001,MRI imaging,PPO,Yes,Advanced imaging usually needs prior authorization before the service.
+AUTH002,MRI imaging,HMO,Yes,HMO members need prior authorization and may need PCP referral.
+AUTH003,Emergency room,All,No,Emergency services do not require prior authorization for true emergencies.
+AUTH004,Specialist visit,HMO,Referral required,PCP referral is required before specialist care.
+AUTH005,Specialist visit,PPO,No,PPO members generally do not need referrals for in-network specialists.

@@ -1,0 +1,18 @@
+plan_id,service_category,cost_share,requires_deductible,requires_prior_auth,notes
+PLAN-PPO-GOLD,Primary care visit,$25 copay,No,No,Use an in-network PCP for the lowest cost.
+PLAN-PPO-GOLD,Specialist visit,$45 copay,No,No,Referral is not required for PPO specialist visits.
+PLAN-PPO-GOLD,Urgent care,$60 copay,No,No,In-network urgent care is usually less expensive than emergency room care.
+PLAN-PPO-GOLD,Emergency room,$350 copay then 20% coinsurance,Yes,No,Emergency care is covered at the in-network level for true emergencies.
+PLAN-PPO-GOLD,MRI imaging,20% coinsurance,Yes,Yes,Advanced imaging usually needs prior authorization.
+PLAN-PPO-GOLD,Out-of-network specialist,40% coinsurance,Yes,No,Balance billing may apply outside the network.
+PLAN-HMO-SILVER,Primary care visit,$20 copay,No,No,Member must use assigned PCP or approved network PCP.
+PLAN-HMO-SILVER,Specialist visit,$35 copay,No,No,Referral from PCP is required.
+PLAN-HMO-SILVER,Urgent care,$50 copay,No,No,Use in-network urgent care unless it is an emergency.
+PLAN-HMO-SILVER,Emergency room,$300 copay then 10% coinsurance,Yes,No,Emergency care is covered for true emergencies.
+PLAN-HMO-SILVER,MRI imaging,10% coinsurance,Yes,Yes,Prior authorization is required.
+PLAN-HMO-SILVER,Out-of-network care,Not covered except emergency,N/A,N/A,HMO plans generally do not cover out-of-network care except emergencies.
+PLAN-HDHP-BRONZE,Primary care visit,20% coinsurance,Yes,No,Deductible applies before coinsurance.
+PLAN-HDHP-BRONZE,Specialist visit,20% coinsurance,Yes,No,Deductible applies before coinsurance.
+PLAN-HDHP-BRONZE,Urgent care,20% coinsurance,Yes,No,Deductible applies before coinsurance.
+PLAN-HDHP-BRONZE,Emergency room,20% coinsurance,Yes,No,Deductible applies before coinsurance.
+PLAN-HDHP-BRONZE,MRI imaging,20% coinsurance,Yes,Yes,Prior authorization is required.

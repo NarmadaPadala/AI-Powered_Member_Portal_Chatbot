@@ -1,0 +1,4 @@
+member_id,display_name,masked_member_id,plan_id,status,effective_date,group_id,pcp_id,deductible_met,out_of_pocket_met,phone_on_file,email_on_file,dependents,open_enrollment_status
+M001,Alex Morgan,****4821,PLAN-PPO-GOLD,Active,2026-01-01,GRP-CA-2048,PRV001,850,1250,(415) ***-1182,alex.morgan@example.com,"Riley Morgan (child); Casey Morgan (spouse)",Open enrollment closed
+M002,Jordan Lee,****7309,PLAN-HMO-SILVER,Active,2026-02-01,GRP-CA-1175,PRV004,300,420,(510) ***-4428,jordan@example.com,"Mia Lee (child)",Open enrollment closed
+M003,Sam Rivera,****0564,PLAN-HDHP-BRONZE,Inactive,2025-01-01,GRP-CA-9910,,1200,1200,(650) ***-9001,sam@example.com,,Coverage terminated 2025-12-31

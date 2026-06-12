@@ -1,0 +1,4 @@
+plan_id,plan_name,plan_type,network_name,deductible_individual,out_of_pocket_max_individual,coinsurance_in_network,coinsurance_out_of_network,referral_required,pcp_required
+PLAN-PPO-GOLD,Gold PPO 500,PPO,BlueCare Choice PPO,1500,6500,20,40,No,No
+PLAN-HMO-SILVER,Silver HMO 1000,HMO,CareFirst HMO Network,1000,5000,10,100,Yes,Yes
+PLAN-HDHP-BRONZE,Bronze HDHP 3000,HDHP,ValueCare PPO,3000,7000,20,50,No,No

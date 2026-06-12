@@ -1,0 +1,7 @@
+ticket_id,category,member_question,resolution_summary
+TCK001,Provider Network,Is Dr Patel in network for my plan?,Dr. Anika Patel is in network for BlueCare Choice PPO and is accepting new patients.
+TCK002,Claims,My MRI claim was denied. Why?,The claim was denied because prior authorization was not obtained before the MRI. Member was directed to appeal instructions.
+TCK003,Account,I need to change my phone number.,Phone updates require secure profile verification. Member was routed to the profile update form.
+TCK004,Enrollment,Can I add my newborn to my plan?,Birth is a qualifying life event. Member must submit the dependent verification form within the allowed enrollment window.
+TCK005,Glossary,What does out of pocket maximum mean?,The out-of-pocket maximum is the most the member pays for covered services during the plan year.
+TCK006,Referral,Can I see a dermatologist without referral?,HMO plan members need a PCP referral for dermatology. PPO plan members generally do not.

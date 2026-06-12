@@ -1,0 +1,5 @@
+rule_id,topic,rule_text,action
+ENR001,Open enrollment,Members can change plans during open enrollment if they are eligible for the plan option.,Show plan change instructions
+ENR002,Special enrollment,Outside open enrollment, a qualifying life event is required for plan changes or dependent additions.,Ask member to submit qualifying event documentation
+ENR003,Dependent addition,Eligible dependents include spouse, domestic partner where allowed, children, adopted children, and certain legal dependents.,Route to dependent verification form
+ENR004,Dependent access,Access to dependent information depends on age, relationship, and consent. Adult dependents must grant access.,Route to family access management

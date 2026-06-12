@@ -1,0 +1,5 @@
+claim_id,member_id,service_date,provider_name,service_category,amount_billed,plan_paid,member_responsibility,status,denial_reason,next_step
+CLM1001,M001,2026-03-14,Dr. Anika Patel,Primary care visit,210,185,25,Processed,,No action needed.
+CLM1002,M001,2026-04-09,Westside Imaging Center,MRI imaging,1450,0,0,Denied,Prior authorization was not obtained,Ask the provider to submit medical records or contact Member Services for an appeal.
+CLM1003,M002,2026-05-01,Dr. Sara Williams,Specialist visit,260,0,35,Pending referral review,Referral missing from PCP,Contact your PCP to submit a referral.
+CLM1004,M003,2026-01-20,Bayview Dermatology,Specialist visit,375,0,375,Denied,Coverage inactive on service date,Contact Member Services if you believe your coverage status is incorrect.

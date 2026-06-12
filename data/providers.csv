@@ -1,0 +1,9 @@
+provider_id,provider_name,provider_type,specialty,network_name,network_status,accepting_new_patients,requires_referral,location,phone
+PRV001,Dr. Anika Patel,Professional,Primary Care,BlueCare Choice PPO,In network,Yes,No,San Jose CA,(408) 555-0101
+PRV002,Dr. Michael Chen,Professional,Cardiology,BlueCare Choice PPO,In network,Yes,Plan dependent,San Francisco CA,(415) 555-0199
+PRV003,Westside Imaging Center,Facility,Radiology,BlueCare Choice PPO,Out of network,Yes,Prior authorization likely,San Francisco CA,(415) 555-0120
+PRV004,Dr. Elena Morris,Professional,Primary Care,CareFirst HMO Network,In network,Yes,No,Oakland CA,(510) 555-0177
+PRV005,Dr. Sara Williams,Professional,Dermatology,CareFirst HMO Network,In network,No,Yes,Berkeley CA,(510) 555-0133
+PRV006,Green Valley Urgent Care,Facility,Urgent Care,BlueCare Choice PPO,In network,Yes,No,San Jose CA,(408) 555-0144
+PRV007,City Hospital Emergency Department,Facility,Emergency Medicine,All emergency networks,Emergency covered,Yes,No,San Francisco CA,(415) 555-0111
+PRV008,Bayview Dermatology,Facility,Dermatology,ValueCare PPO,Out of network,Yes,No,San Mateo CA,(650) 555-0188
