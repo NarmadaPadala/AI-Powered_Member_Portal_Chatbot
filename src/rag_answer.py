@@ -2,7 +2,7 @@ from openai import OpenAI
 from typing import Optional
 
 from src.documents import load_kb_documents
-from src.local_hybrid import local_hybrid_search
+from src.local_hybrid import local_hybrid_search, normalize_text
 from src.safety import classify_query
 from src.settings import Settings
 
@@ -13,7 +13,7 @@ MEMBER_SERVICES_PHONE = "1-800-555-0198"
 def inactive_cost_guardrail(member: dict, question: str) -> Optional[str]:
     if member.get("status") != "Inactive":
         return None
-    normalized = question.lower()
+    normalized = normalize_text(question)
     if any(term in normalized for term in ["cost", "pay", "copay", "estimate", "covered"]):
         return (
             "I cannot estimate current benefits because this sample member's coverage is "
@@ -37,7 +37,7 @@ def fallback_answer(
     top = matches[0]["metadata"]
     text = top.get("text", "")
     source_type = top.get("source_type", "source")
-    normalized = question.lower()
+    normalized = normalize_text(question)
 
     if source_type == "member_profile" and "group id" in normalized:
         return f"Your group ID is {member.get('group_id')}."

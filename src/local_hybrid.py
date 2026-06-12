@@ -9,6 +9,7 @@ TOKEN_RE = re.compile(r"[a-z0-9]+")
 
 QUERY_EXPANSIONS = {
     "deductble": "deductible",
+    "groupid": "group id",
     "netwrok": "network",
     "near by": "nearby",
     "patell": "patel",
@@ -21,6 +22,14 @@ QUERY_EXPANSIONS = {
 
 def normalize_text(text: str) -> str:
     lowered = text.lower()
+    split_term_typos = {
+        r"\bgr\s+oup\s+id\b": "group id",
+        r"\bgrou\s+pid\b": "group id",
+        r"\bgrou\s+p\s*id\b": "group id",
+    }
+    for pattern, replacement in split_term_typos.items():
+        lowered = re.sub(pattern, replacement, lowered)
+
     provider_typos = {
         r"\bnear\s+by\s+pc\b": "nearby primary care provider",
         r"\bnearby\s+pc\b": "nearby primary care provider",
