@@ -2,6 +2,8 @@ from dataclasses import dataclass
 import re
 from typing import Optional
 
+from src.local_hybrid import normalize_text
+
 
 EMERGENCY_TERMS = {
     "chest pain",
@@ -98,6 +100,29 @@ HEALTHCARE_INTENT_TERMS = {
     "referral",
     "specialist",
     "urgent",
+    "primary care provider",
+    "nearby primary care provider",
+}
+
+GENERAL_SUPPORT_TERMS = {
+    "can",
+    "could",
+    "do",
+    "does",
+    "help",
+    "how",
+    "i",
+    "is",
+    "me",
+    "my",
+    "need",
+    "please",
+    "show",
+    "suggest",
+    "tell",
+    "what",
+    "why",
+    "you",
 }
 
 
@@ -109,7 +134,8 @@ class SafetyDecision:
 
 def classify_query(query: str) -> SafetyDecision:
     normalized = query.lower().strip()
-    normalized_text = re.sub(r"[^a-z0-9\s-]", " ", normalized)
+    normalized_text = normalize_text(query)
+    normalized_text = re.sub(r"[^a-z0-9\s-]", " ", normalized_text)
     normalized_text = re.sub(r"\s+", " ", normalized_text).strip()
 
     has_healthcare_intent = any(term in normalized_text for term in HEALTHCARE_INTENT_TERMS)
@@ -161,6 +187,16 @@ def classify_query(query: str) -> SafetyDecision:
                 "I cannot guarantee claim payment in chat. Final payment depends on "
                 "eligibility, benefits, medical policy, provider billing, and claim "
                 "review. Please contact Member Services for a formal review."
+            ),
+        )
+
+    meaningful_words = {word for word in words if word not in GENERAL_SUPPORT_TERMS}
+    if not has_healthcare_intent and meaningful_words:
+        return SafetyDecision(
+            route="out_of_scope",
+            message=(
+                "I can help with healthcare coverage, benefits, claims, providers, forms, "
+                "and account support. Please ask a healthcare or plan-related question."
             ),
         )
 
