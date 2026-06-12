@@ -136,6 +136,28 @@ This makes the real-world support behavior easier to explain and audit.
 
 This repo is designed to be deployed safely because it uses only mock data. Do not add real PHI, real member IDs, real claims, or real provider contracts. For deployment, set `PINECONE_API_KEY` as a secret in the hosting platform rather than committing it to GitHub.
 
+## Streamlit Community Cloud deployment
+
+Use these settings when creating the Streamlit app:
+
+- Repository: `NarmadaPadala/AI-Powered_Member_Portal_Chatbot`
+- Branch: `main`
+- Main file path: `app.py`
+
+Add these values in Streamlit Cloud secrets:
+
+```toml
+OPENAI_API_KEY = "your-openai-api-key"
+PINECONE_API_KEY = "your-pinecone-api-key"
+PINECONE_INDEX_NAME = "healthcare-support-rag"
+PINECONE_CLOUD = "aws"
+PINECONE_REGION = "us-east-1"
+PINECONE_NAMESPACE = "demo-healthcare-support"
+PINECONE_DIMENSION = "512"
+OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
+OPENAI_CHAT_MODEL = "gpt-4.1-mini"
+```
+
 ## Installed package versions checked
 
 - `langchain`: `0.3.30`
