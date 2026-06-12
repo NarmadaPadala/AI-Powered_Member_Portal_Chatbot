@@ -21,6 +21,14 @@ QUERY_EXPANSIONS = {
 
 def normalize_text(text: str) -> str:
     lowered = text.lower()
+    provider_typos = {
+        r"\bnear\s+by\s+pc\b": "nearby primary care provider",
+        r"\bnearby\s+pc\b": "nearby primary care provider",
+        r"\bsuggest\s+(a\s+)?pc\b": "suggest primary care provider",
+        r"\bfind\s+(a\s+)?pc\b": "find primary care provider",
+    }
+    for pattern, replacement in provider_typos.items():
+        lowered = re.sub(pattern, replacement, lowered)
     for typo, replacement in QUERY_EXPANSIONS.items():
         lowered = lowered.replace(typo, replacement)
     return lowered
